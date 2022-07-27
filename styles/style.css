@@ -10,4 +10,223 @@
   padding: 0;
 }
 
+body {
+  font-family: "Epilogue", sans-serif;
+  background-color: hsl(30deg, 29%, 97%);
+  padding-top: 1.6rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 1.0666666667rem;
+  margin-bottom: 3.7333333333rem;
+}
+
+.logo {
+  width: 5.4rem;
+}
+
+.header__button {
+  font-size: 0.9333333333rem;
+  line-height: 1.7142857143;
+  font-weight: 700;
+  letter-spacing: -0.0093333333rem;
+  background-color: transparent;
+  color: hsl(219deg, 43%, 16%);
+  padding: 0.8571428571em 1.1428571429em;
+  border: 1px solid hsl(219deg, 43%, 16%);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.section-top {
+  margin-inline: 16px;
+  color: hsl(218deg, 20%, 36%);
+}
+
+.top__heading {
+  font-size: 2.5333333333rem;
+  line-height: 1.1578947368;
+  font-weight: 400;
+  letter-spacing: -0.0351852rem;
+  color: hsl(219deg, 43%, 16%);
+  position: relative;
+  margin-bottom: 0.8421052632em;
+}
+.top__heading::before {
+  content: "";
+  background-image: url("../assets/pattern-curved-line-1.svg");
+  background-size: cover;
+  position: absolute;
+  width: 10.098rem;
+  height: 1.2666666667rem;
+  top: -1.6806666667rem;
+  left: 10.2666666667rem;
+}
+
+.top__paragraph {
+  font-size: 1.0666666667rem;
+  line-height: 1.75;
+  font-weight: 400;
+  letter-spacing: -0.0059259267rem;
+  color: hsl(218deg, 20%, 36%);
+  margin-bottom: 2em;
+}
+
+.top__button {
+  font-size: 1.2rem;
+  line-height: 1.7777777778;
+  font-weight: 700;
+  letter-spacing: -0.012rem;
+  background-color: hsl(219deg, 43%, 16%);
+  color: hsl(30deg, 29%, 97%);
+  border: 0;
+  padding: 0.8333333333em 1.7777777778em;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 3.712rem;
+}
+
+.hero-image {
+  width: 100%;
+  margin-bottom: 3.7333333333rem;
+}
+
+.top__stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.1333333333rem;
+  margin-bottom: 15.8rem;
+}
+
+.stats__number {
+  font-size: 3.2rem;
+  line-height: 1.1666666667;
+  font-weight: 700;
+  color: hsl(219deg, 43%, 16%);
+  text-align: center;
+  margin-bottom: 0.0208333333em;
+}
+
+.stats__caption {
+  font-size: 1.0666666667rem;
+  line-height: 1.625;
+  font-weight: 400;
+  letter-spacing: 0.1666666667rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-bottom {
+  background-color: hsl(219deg, 43%, 16%);
+  border-radius: 15px;
+  position: relative;
+  padding-top: 17.4rem;
+  padding-bottom: 4.2666666667rem;
+  z-index: 2;
+}
+
+.bottom__image-wrapper {
+  position: absolute;
+  top: -12.0666666667rem;
+  width: 100%;
+}
+
+.image-jeremy {
+  width: 16.8rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.image-blur {
+  position: absolute;
+  z-index: 0;
+  top: 5.6666666667rem;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 21rem;
+}
+
+.image-curved-line {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2.4666666667rem;
+}
+
+.bottom__heading {
+  font-size: 2.6666666667rem;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.0277778rem;
+  color: hsl(30deg, 29%, 97%);
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.bottom__quote {
+  font-size: 1.2rem;
+  line-height: 1.7777777778;
+  font-weight: 400;
+  text-align: center;
+  color: hsl(30deg, 33%, 93%);
+  margin-inline: 1.1333333333rem;
+  margin-bottom: 2.2222222222em;
+}
+
+.caption__name {
+  font-size: 1.2rem;
+  line-height: 1.7777777778;
+  font-weight: 700;
+  letter-spacing: -0.012rem;
+  color: hsl(30deg, 29%, 97%);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.caption__position {
+  font-size: 1.0666666667rem;
+  line-height: 1.625;
+  font-weight: 400;
+  color: hsl(30deg, 33%, 93%);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footer {
+  background-color: hsl(30deg, 33%, 93%);
+  padding-top: 12.6666666667rem;
+  padding-bottom: 5.3333333333rem;
+  position: relative;
+  top: -8.9333333333rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.footer__copyright {
+  font-size: 1rem;
+  line-height: 2.1333333333;
+  font-weight: 400;
+  letter-spacing: 0.0055555533rem;
+  color: hsl(218deg, 20%, 36%);
+}
+
+.footer__social-media {
+  width: 100%;
+  max-width: 7.7333333333rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /*# sourceMappingURL=style.css.map */

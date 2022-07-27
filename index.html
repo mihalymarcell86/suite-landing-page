@@ -1,43 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Suite landing page</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
 
-  Request Beta Access
+    <title>Frontend Mentor | Suite landing page</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./assets/logo.svg" alt="suite logo" class="logo" />
+      <button class="header__button">Request Beta Access</button>
+    </header>
+    <main>
+      <section class="section-top">
+        <div>
+          <h1 class="top__heading">
+            A <strong>super solution</strong> for your
+            <strong>business.</strong>
+          </h1>
+          <p class="top__paragraph">
+            Our marketing and sales automations help you scale your outreach to
+            get more leads for your company.
+          </p>
+          <button class="top__button">Request Beta Access</button>
+        </div>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="./assets/image-hero-landscape.webp"
+          />
+          <img
+            src="./assets/image-hero-landscape.png"
+            alt=""
+            class="hero-image"
+          />
+        </picture>
+        <div class="top__stats">
+          <div>
+            <div class="stats__number">2K+</div>
+            <div class="stats__caption">Companies</div>
+          </div>
+          <div>
+            <div class="stats__number">8</div>
+            <div class="stats__caption">Languages</div>
+          </div>
+          <div>
+            <div class="stats__number">1.2M</div>
+            <div class="stats__caption">Leads</div>
+          </div>
+        </div>
+      </section>
+      <section class="section-bottom">
+        <div class="bottom__image-wrapper">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="./assets/image-jeremy-small.webp"
+            />
+            <img
+              src="./assets/image-jeremy-small.png"
+              alt="Jeremy Robinson checking his phone"
+              class="image-jeremy"
+            />
+          </picture>
+          <img src="./assets/pattern-blur.svg" alt="" class="image-blur" />
+        </div>
+        <img
+          src="../assets/pattern-curved-line-2.svg"
+          alt=""
+          class="image-curved-line"
+        />
 
-  A super solution for your business.
-
-  Our marketing and sales automations help you scale your outreach to 
-  get more leads for your company. 
-
-  Request Beta Access
-
-  2K+
-  Companies
-
-  8
-  Languages
-
-  1.2M
-  Leads
-
-  It just works.
-
-  “I really like how it is an all-in-one solution that handle many of 
-  the tasks that you would normally need separate tools to do the same 
-  job. This thing is a miracle worker.”
-
-  Jeremy Robinson
-  CMO, Fylo
-
-  Copyright - Suite
-
-</body>
+        <h2 class="bottom__heading">It just <strong>works.</strong></h2>
+        <blockquote class="bottom__quote">
+          I really like how it is an all-in-one solution that handle many of the
+          tasks that you would normally need separate tools to do the same job.
+          This thing is a miracle worker.
+        </blockquote>
+        <figcaption>
+          <div class="caption__name">Jeremy Robinson</div>
+          <div class="caption__position">CMO, Fylo</div>
+        </figcaption>
+      </section>
+    </main>
+    <footer class="footer">
+      <img src="./assets/logo.svg" alt="suite logo" class="logo" />
+      <p class="footer__copyright">Copyright - Suite</p>
+      <div class="footer__social-media">
+        <a href="https://www.facebook.com"
+          ><img src="./assets/icon-facebook.svg" alt="go to Facebook"
+        /></a>
+        <a href="https://www.twitter.com"
+          ><img src="./assets/icon-twitter.svg" alt="go to Twitter"
+        /></a>
+        <a href="https://www.instagram.com"
+          ><img src="./assets/icon-instagram.svg" alt="go to Instagram"
+        /></a>
+      </div>
+    </footer>
+  </body>
 </html>

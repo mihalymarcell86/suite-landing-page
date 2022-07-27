@@ -1,3 +1,202 @@
 @use "utilities/global" as *;
 
 @include setup;
+
+body {
+  font-family: $font-epilogue;
+  background-color: color(cream-white);
+  padding-top: rem(24px);
+}
+
+strong {
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: rem(16px);
+  margin-bottom: rem(56px);
+}
+
+.logo {
+  width: rem(81px);
+}
+
+.header__button {
+  @include setFont(rem(14px), 24px, 700);
+  letter-spacing: rem(-0.14px);
+  background-color: transparent;
+  color: color(dark-blue);
+  padding: em(12px, 14px) em(16px, 14px);
+  border: 1px solid color(dark-blue);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.section-top {
+  margin-inline: 16px;
+  color: color(grey);
+}
+
+.top__heading {
+  @include setFont(rem(38px), 44px, 400);
+  letter-spacing: rem(-0.527778px);
+  color: color(dark-blue);
+  position: relative;
+  margin-bottom: em(32px, 38px);
+  &::before {
+    //TODO: adjust for smaller screen sizes
+    content: "";
+    background-image: url("../assets/pattern-curved-line-1.svg");
+    background-size: cover;
+    position: absolute;
+    width: rem(151.47px);
+    height: rem(19px);
+    top: rem(-25.21px);
+    left: rem(154px);
+  }
+}
+
+.top__paragraph {
+  @include setFont(rem(16px), 28px, 400);
+  letter-spacing: rem(-0.0888889px);
+  color: color(grey);
+  margin-bottom: em(32px, 16px);
+}
+
+.top__button {
+  @include setFont(rem(18px), 32px, 700);
+  letter-spacing: rem(-0.18px);
+  background-color: color(dark-blue);
+  color: color(cream-white);
+  border: 0;
+  padding: em(15px, 18px) em(32px, 18px);
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: rem(55.68px);
+}
+
+.hero-image {
+  width: 100%;
+  margin-bottom: rem(56px);
+}
+
+.top__stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(32px);
+  margin-bottom: rem(237px);
+}
+
+.stats__number {
+  @include setFont(rem(48px), 56px, 700);
+  color: color(dark-blue);
+  text-align: center;
+  margin-bottom: em(1px, 48px);
+}
+
+.stats__caption {
+  @include setFont(rem(16px), 26px, 400);
+  letter-spacing: rem(2.5px);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-bottom {
+  background-color: color(dark-blue);
+  border-radius: 15px;
+  position: relative;
+  padding-top: rem(261px);
+  padding-bottom: rem(64px);
+  z-index: 2;
+}
+
+.bottom__image-wrapper {
+  position: absolute;
+  top: rem(-181px);
+  width: 100%;
+}
+
+.image-jeremy {
+  //TODO: adjust HTML for correct resolution
+  width: rem(252px);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.image-blur {
+  position: absolute;
+  z-index: 0;
+  top: rem(85px);
+  left: 55%;
+  transform: translateX(-50%);
+  width: rem(315px);
+}
+
+.image-curved-line {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: rem(37px);
+}
+
+.bottom__heading {
+  @include setFont(rem(40px), 48px, 400);
+  letter-spacing: rem(-0.416667px);
+  color: color(cream-white);
+  text-align: center;
+  margin-bottom: em(40px, 40px);
+}
+
+.bottom__quote {
+  @include setFont(rem(18px), 32px, 400);
+  text-align: center;
+  color: color(cream);
+  margin-inline: rem(17px);
+  margin-bottom: em(40px, 18px);
+}
+
+.caption__name {
+  @include setFont(rem(18px), 32px, 700);
+  letter-spacing: rem(-0.18px);
+  color: color(cream-white);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.caption__position {
+  @include setFont(rem(16px), 26px, 400);
+  color: color(cream);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footer {
+  background-color: color(cream);
+  padding-top: rem(190px);
+  padding-bottom: rem(80px);
+  position: relative;
+  top: rem(-134px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(33px);
+}
+
+.footer__copyright {
+  @include setFont(rem(15px), 32px, 400);
+  letter-spacing: rem(0.0833333px);
+  color: color(grey);
+}
+
+.footer__social-media {
+  width: 100%;
+  max-width: rem(116px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
