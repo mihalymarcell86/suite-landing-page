@@ -154,7 +154,7 @@ a:hover, a:focus {
 }
 @media (min-width: 1200px) {
   .top__heading {
-    margin-right: -15.3333333333rem;
+    margin-right: min(-14.6666666667rem, 0.0416666667 * 100vw + -18.6666666667rem);
   }
 }
 

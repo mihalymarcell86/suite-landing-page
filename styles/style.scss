@@ -130,7 +130,7 @@ a {
     }
   }
   @media (min-width: 1200px) {
-    margin-right: rem(-230px);
+    margin-right: lerp_min(1200px, rem(-230px), $w-desktop, rem(-220px));
   }
 }
 
