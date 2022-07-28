@@ -41,14 +41,31 @@
         <picture>
           <source
             media="(min-width:768px)"
-            srcset="./assets/image-hero-portrait.png"
+            type="image/webp"
+            srcset="
+              ./assets/image-hero-portrait.webp,
+              ./assets/image-hero-portrait@2x.webp 2x
+            "
+          />
+          <source
+            media="(min-width:768px)"
+            srcset="
+              ./assets/image-hero-portrait.png,
+              ./assets/image-hero-portrait@2x.png 2x
+            "
           />
           <source
             type="image/webp"
-            srcset="./assets/image-hero-landscape.webp"
+            srcset="
+              ./assets/image-hero-landscape.webp,
+              ./assets/image-hero-landscape@2x.webp 2x
+            "
           />
           <img
-            src="./assets/image-hero-landscape.png"
+            srcset="
+              ./assets/image-hero-landscape.png,
+              ./assets/image-hero-landscape@2x.png 2x
+            "
             alt=""
             class="hero-image"
           />
@@ -72,11 +89,32 @@
         <div class="bottom__image-wrapper">
           <picture>
             <source
+              media="(min-width: 1440px)"
               type="image/webp"
-              srcset="./assets/image-jeremy-small.webp"
+              srcset="
+                ./assets/image-jeremy-large.webp,
+                ./assets/image-jeremy-large@2x.webp 2x
+              "
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./assets/image-jeremy-large.png,
+                ./assets/image-jeremy-large@2x.png 2x
+              "
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./assets/image-jeremy-small.webp,
+                ./assets/image-jeremy-small@2x.webp 2x
+              "
             />
             <img
-              src="./assets/image-jeremy-small.png"
+              srcset="
+                ./assets/image-jeremy-small.png,
+                ./assets/image-jeremy-small@2x.png 2x
+              "
               alt="Jeremy Robinson checking his phone"
               class="image-jeremy"
             />
@@ -88,17 +126,18 @@
           alt=""
           class="image-curved-line"
         />
-
-        <h2 class="bottom__heading">It just <strong>works.</strong></h2>
-        <blockquote class="bottom__quote">
-          I really like how it is an all-in-one solution that handle many of the
-          tasks that you would normally need separate tools to do the same job.
-          This thing is a miracle worker.
-        </blockquote>
-        <figcaption>
-          <div class="caption__name">Jeremy Robinson</div>
-          <div class="caption__position">CMO, Fylo</div>
-        </figcaption>
+        <div>
+          <h2 class="bottom__heading">It just <strong>works.</strong></h2>
+          <blockquote class="bottom__quote">
+            I really like how it is an all-in-one solution that handle many of
+            the tasks that you would normally need separate tools to do the same
+            job. This thing is a miracle worker.
+          </blockquote>
+          <figcaption>
+            <div class="caption__name">Jeremy Robinson</div>
+            <div class="caption__position">CMO, Fylo</div>
+          </figcaption>
+        </div>
       </section>
     </main>
     <footer class="footer">

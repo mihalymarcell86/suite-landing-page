@@ -3,6 +3,7 @@
 @include setup;
 
 //TODO: make SVG accessible
+//add image resolutions
 
 body {
   font-family: $font-epilogue;
@@ -10,6 +11,9 @@ body {
   padding-top: rem(24px);
   @media (min-width: $w-tablet) {
     padding-top: rem(40px);
+  }
+  @media (min-width: $w-desktop) {
+    padding-top: rem(50px);
   }
 }
 
@@ -36,6 +40,10 @@ a {
   @media (min-width: $w-tablet) {
     margin-inline: rem(40px);
     margin-bottom: rem(80px);
+  }
+  @media (min-width: $w-desktop) {
+    margin-inline: rem(165px);
+    margin-bottom: rem(67px);
   }
 }
 
@@ -67,13 +75,20 @@ a {
   margin-inline: rem(16px);
   margin-bottom: rem(237px);
   color: color(grey);
-  display: grid;
   @media (min-width: $w-tablet) {
+    display: grid;
     margin-inline: rem(40px);
     grid-template: repeat(2, min-content) / 1fr 281px;
     grid-template-areas: "top-text hero-img" "stats stats";
     row-gap: rem(88px);
     margin-bottom: rem(273px);
+  }
+  @media (min-width: $w-desktop) {
+    margin-inline: rem(165px);
+    grid-template: none / 474px 350px min-content;
+    gap: 0;
+    grid-template-areas: "top-text hero-img stats";
+    margin-bottom: rem(199px);
   }
 }
 
@@ -101,14 +116,26 @@ a {
   @media (min-width: $w-tablet) {
     @include setFont(rem(56px), 64px);
     letter-spacing: rem(-0.777778px);
-    margin-top: rem(88px);
-    margin-right: rem(-130px);
+    margin-top: em(88px, 56px);
+    margin-right: em(-130px, 56px);
     margin-bottom: em(40px, 56px);
     &:before {
       width: rem(231.19px);
       height: rem(29px);
       top: rem(-45.32px);
       left: rem(223px);
+    }
+  }
+  @media (min-width: $w-desktop) {
+    @include setFont(rem(72px), 78px);
+    letter-spacing: rem(-1px);
+    margin-top: em(103px, 72px);
+    margin-right: em(-210px, 72px);
+    &:before {
+      width: rem(287px);
+      height: rem(36px);
+      top: rem(-57.32px);
+      left: rem(289px);
     }
   }
 }
@@ -120,6 +147,13 @@ a {
   margin-bottom: em(32px, 16px);
   @media (min-width: $w-tablet) {
     margin-bottom: em(40px, 16px);
+    margin-right: rem(50px);
+  }
+  @media (min-width: $w-desktop) {
+    @include setFont(rem(18px), 32px);
+    letter-spacing: rem(0.1px);
+    margin-bottom: em(52px, 18px);
+    margin-right: em(124px, 18px);
   }
 }
 
@@ -141,6 +175,7 @@ a {
   }
 }
 
+//TODO: specify image size for grid template
 .hero-image {
   width: 100%;
   margin-bottom: rem(56px);
@@ -162,6 +197,15 @@ a {
     justify-content: space-around;
     gap: rem(10px);
   }
+  @media (min-width: $w-desktop) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(63px);
+    justify-content: flex-start;
+    margin-top: rem(106px);
+    margin-left: rem(96px);
+    width: rem(190px);
+  }
 }
 
 .stats__number {
@@ -169,6 +213,9 @@ a {
   color: color(dark-blue);
   text-align: center;
   margin-bottom: em(1px, 48px);
+  @media (min-width: $w-desktop) {
+    text-align: left;
+  }
 }
 
 .stats__caption {
@@ -176,6 +223,9 @@ a {
   letter-spacing: rem(2.5px);
   text-transform: uppercase;
   text-align: center;
+  @media (min-width: $w-desktop) {
+    text-align: left;
+  }
 }
 
 .section-bottom {
@@ -185,8 +235,21 @@ a {
   padding-top: rem(261px);
   padding-bottom: rem(64px);
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(37px);
   @media (min-width: $w-tablet) {
     margin-inline: rem(40px);
+  }
+  @media (min-width: $w-desktop) {
+    margin-inline: rem(165px);
+    padding-block: rem(88px);
+    padding-left: rem(517.2px);
+    padding-right: rem(125px);
+    flex-direction: row;
+    align-items: flex-start;
+    gap: rem(52.75px);
   }
 }
 
@@ -200,15 +263,25 @@ a {
   @media (min-width: $w-tablet) {
     top: rem(-190px);
   }
+  @media (min-width: $w-desktop) {
+    inset: 0;
+    height: auto;
+    overflow: visible;
+  }
 }
 
 .image-jeremy {
-  //TODO: adjust HTML for correct resolution
   width: rem(252px);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  @media (min-width: $w-desktop) {
+    width: rem(365px);
+    bottom: 0;
+    left: rem(112px);
+    transform: none;
+  }
 }
 
 .image-blur {
@@ -222,14 +295,21 @@ a {
     width: rem(390px);
     left: 50%;
   }
+  @media (min-width: $w-desktop) {
+    width: rem(565px);
+    left: rem(285px);
+    top: rem(60px);
+  }
 }
 
 .image-curved-line {
-  display: block;
-  margin: 0 auto;
   width: rem(49.27px);
   height: rem(40px);
-  margin-bottom: rem(37px);
+  @media (min-width: $w-desktop) {
+    width: rem(64.05px);
+    height: rem(52px);
+    margin-top: rem(73.15px);
+  }
 }
 
 .bottom__heading {
@@ -238,6 +318,12 @@ a {
   color: color(cream-white);
   text-align: center;
   margin-bottom: em(40px, 40px);
+  @media (min-width: $w-desktop) {
+    @include setFont(rem(46px), 58px);
+    letter-spacing: rem(-0.5px);
+    text-align: left;
+    margin-bottom: em(40px, 46px);
+  }
 }
 
 .bottom__quote {
@@ -249,6 +335,13 @@ a {
   @media (min-width: $w-tablet) {
     margin-inline: rem(58px);
   }
+  @media (min-width: $w-desktop) {
+    @include setFont(rem(20px), 35px);
+    letter-spacing: rem(0.1px);
+    text-align: left;
+    margin-inline: 0;
+    margin-bottom: em(40px, 20px);
+  }
 }
 
 .caption__name {
@@ -257,13 +350,20 @@ a {
   color: color(cream-white);
   text-align: center;
   text-transform: uppercase;
+  @media (min-width: $w-desktop) {
+    text-align: left;
+  }
 }
 
 .caption__position {
   @include setFont(rem(16px), 26px, 400);
+  letter-spacing: rem(2.5px);
   color: color(cream);
   text-align: center;
   text-transform: uppercase;
+  @media (min-width: $w-desktop) {
+    text-align: left;
+  }
 }
 
 .footer {
@@ -283,6 +383,12 @@ a {
     top: rem(-464px);
     padding-top: rem(536px);
     padding-bottom: rem(72px);
+  }
+  @media (min-width: $w-desktop) {
+    padding-inline: rem(165px);
+    padding-top: rem(360px);
+    padding-bottom: rem(72px);
+    top: rem(-265px);
   }
 }
 
